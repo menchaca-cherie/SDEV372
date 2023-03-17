@@ -1,17 +1,16 @@
 import objects.Dice;
 import org.junit.jupiter.api.RepeatedTest;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.ValueSource;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DiceTests {
 
-    @RepeatedTest(10)
-    public void constructorDice(int sides, String color)
+    @RepeatedTest(2)
+    public void colorDice()
     {
-        Dice dice = new Dice()
-        {
-
-        }
+        Dice dice = new Dice(6, "red");
+        assertEquals(6, dice.getSides());
+        assertNotEquals("black", dice.getColor());
     }
+
 }
