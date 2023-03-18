@@ -1,11 +1,12 @@
 import objects.Dice;
 import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DiceTests {
 
-    @RepeatedTest(2)
+    @Test
     public void colorDice()
     {
         Dice dice = new Dice(6, "red");
